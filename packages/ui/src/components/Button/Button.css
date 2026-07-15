@@ -2,17 +2,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--ui-space-2);
   border-radius: var(--ui-radius-md);
-  padding: var(--ui-space-2) var(--ui-space-4);
+  padding: var(--ui-space-3) var(--ui-space-4);
   font-family: var(--ui-font-sans);
   font-size: var(--ui-font-size-button);
-  font-weight: var(--ui-font-weight-medium);
+  font-weight: var(--ui-font-weight-bold);
   line-height: var(--ui-line-height-ui);
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   cursor: pointer;
   transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast),
-    transform var(--ui-transition-fast);
+    color var(--ui-transition-fast), transform var(--ui-transition-fast);
 }
 
 .ui-library-button:active:not(:disabled),
@@ -22,36 +21,46 @@
 
 .ui-library-button:disabled {
   cursor: not-allowed;
-  background-color: var(--ui-color-bg-disabled);
-  border-color: var(--ui-color-bg-disabled);
-  color: var(--ui-color-fg-default);
 }
 
-.ui-library-button--primary {
-  background-color: var(--ui-color-accent-default);
+/* Main — filled. Rest / hover / active(pressed) / disabled. */
+.ui-library-button--main {
+  background-color: var(--ui-color-secondary);
   color: var(--ui-color-accent-fg);
 }
 
-.ui-library-button--primary:hover:not(:disabled) {
+.ui-library-button--main:hover:not(:disabled) {
   background-color: var(--ui-color-accent-hover);
 }
 
-.ui-library-button--primary:active:not(:disabled),
-.ui-library-button--primary.ui-library-button--pressed:not(:disabled) {
-  background-color: var(--ui-color-accent-hover);
+.ui-library-button--main:active:not(:disabled),
+.ui-library-button--main.ui-library-button--pressed:not(:disabled) {
+  background-color: var(--ui-color-accent-active);
 }
 
+.ui-library-button--main:disabled {
+  background-color: var(--ui-color-bg-disabled);
+}
+
+/* Secondary — outline. Same color ladder, applied to border + text. */
 .ui-library-button--secondary {
-  background-color: transparent;
-  color: var(--ui-color-fg-default);
-  border-color: var(--ui-color-border-default);
+  background-color: var(--ui-color-bg-default);
+  color: var(--ui-color-secondary);
+  border-color: var(--ui-color-secondary);
 }
 
 .ui-library-button--secondary:hover:not(:disabled) {
-  background-color: var(--ui-color-bg-subtle);
+  color: var(--ui-color-accent-hover);
+  border-color: var(--ui-color-accent-hover);
 }
 
 .ui-library-button--secondary:active:not(:disabled),
 .ui-library-button--secondary.ui-library-button--pressed:not(:disabled) {
-  background-color: var(--ui-color-bg-subtle);
+  color: var(--ui-color-accent-active);
+  border-color: var(--ui-color-accent-active);
+}
+
+.ui-library-button--secondary:disabled {
+  color: var(--ui-color-bg-disabled);
+  border-color: var(--ui-color-bg-disabled);
 }

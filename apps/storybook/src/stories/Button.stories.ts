@@ -15,7 +15,7 @@ const meta = {
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'radio', options: ['primary', 'secondary'] },
+    variant: { control: 'radio', options: ['main', 'secondary'] },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#story-args
   args: { onClick: fn(), children: 'Button' },
@@ -25,15 +25,22 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const Main: Story = {
   args: {
-    variant: 'primary',
+    variant: 'main',
   },
 };
 
-export const PrimaryDisabled: Story = {
+export const MainPressed: Story = {
   args: {
-    variant: 'primary',
+    variant: 'main',
+    pressed: true,
+  },
+};
+
+export const MainDisabled: Story = {
+  args: {
+    variant: 'main',
     disabled: true,
   },
 };
@@ -44,16 +51,16 @@ export const Secondary: Story = {
   },
 };
 
+export const SecondaryPressed: Story = {
+  args: {
+    variant: 'secondary',
+    pressed: true,
+  },
+};
+
 export const SecondaryDisabled: Story = {
   args: {
     variant: 'secondary',
     disabled: true,
-  },
-};
-
-export const Pressed: Story = {
-  args: {
-    variant: 'primary',
-    pressed: true,
   },
 };
