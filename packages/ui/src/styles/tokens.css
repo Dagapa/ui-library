@@ -5,15 +5,20 @@
   --ui-color-neutral-light: #f2f2f2;
   --ui-color-neutral-dark: #040C16;
   --ui-color-disabled: #D6D6D6;
+  --ui-color-error: #e5484d;
+
 
   --ui-color-bg-default: #ffffff;
   --ui-color-bg-subtle: var(--ui-color-neutral-light);
   --ui-color-bg-disabled: var(--ui-color-disabled);
   --ui-color-border-default: var(--ui-color-primary);
+  --ui-color-border-subtle: var(--ui-color-disabled);
   --ui-color-accent-default: var(--ui-color-primary);
   --ui-color-accent-hover: var(--ui-color-primary-dark);
   --ui-color-accent-active: var(--ui-color-neutral-dark);
   --ui-color-accent-fg: #ffffff;
+  --ui-color-fg-default: var(--ui-color-neutral-dark);
+  --ui-color-fg-muted: var(--ui-color-disabled);
 
   --ui-font-family-brand: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ui-font-sans: var(--ui-font-family-brand);
