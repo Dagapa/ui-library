@@ -1,0 +1,53 @@
+:root {
+  --ui-color-primary: #4bdbe6;
+  --ui-color-primary-dark: #0d4f5e;
+  --ui-color-secondary: #1999bc;
+  --ui-color-neutral-light: #f2f2f2;
+  --ui-color-neutral-dark: #0a0c16;
+  --ui-color-disabled: #D6D6D6;
+
+  --ui-color-bg-default: #ffffff;
+  --ui-color-bg-subtle: var(--ui-color-neutral-light);
+  --ui-color-bg-disabled: var(--ui-color-disabled);
+  --ui-color-fg-default: var(--ui-color-neutral-dark);
+  --ui-color-border-default: var(--ui-color-neutral-light);
+  --ui-color-accent-default: var(--ui-color-secondary);
+  --ui-color-accent-hover: var(--ui-color-primary-dark);
+  --ui-color-accent-fg: #ffffff;
+
+  --ui-font-family-brand: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ui-font-sans: var(--ui-font-family-brand);
+
+  --ui-font-size-h1: 3rem;
+  --ui-font-size-h2: 2.5rem;
+  --ui-font-size-h3: 2.125rem;
+  --ui-font-size-h4: 1.5rem;
+
+  --ui-font-size-body-lg: 1.125rem;
+  --ui-font-size-body-md: 1rem;
+  --ui-font-size-body-sm: 0.875rem;
+
+  --ui-font-size-button: 0.875rem;
+  --ui-font-size-caption: 0.75rem;
+  --ui-font-size-label: 0.625rem;
+
+  --ui-font-weight-regular: 400;
+  --ui-font-weight-medium: 500;
+  --ui-font-weight-semibold: 600;
+  --ui-font-weight-bold: 700;
+
+  --ui-line-height-ui: 1.25rem;
+
+  --ui-space-1: 0.25rem;
+  --ui-space-2: 0.5rem;
+  --ui-space-3: 0.75rem;
+  --ui-space-4: 1rem;
+
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 6px;
+  --ui-radius-lg: 10px;
+
+  --ui-transition-fast: 0.15s ease;
+
+  font-family: var(--ui-font-sans);
+}
