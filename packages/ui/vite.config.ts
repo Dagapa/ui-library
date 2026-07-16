@@ -20,7 +20,17 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      // use-sync-external-store is CJS-only (no ESM build); Rolldown can't
+      // statically convert its internal `require('react')`, so it must stay
+      // external and be resolved at runtime instead of inlined.
+      external: [
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'use-sync-external-store',
+        'use-sync-external-store/shim',
+        'use-sync-external-store/shim/with-selector',
+      ],
     },
   },
 });
