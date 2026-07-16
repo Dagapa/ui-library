@@ -10,7 +10,7 @@ const options = [
 ];
 
 const meta = {
-  title: 'Example/Select',
+  title: 'Sorin/Select',
   component: Select,
   parameters: {
     layout: 'centered',
