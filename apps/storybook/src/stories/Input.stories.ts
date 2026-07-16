@@ -8,7 +8,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  args: { label: 'label', placeholder: 'Digita'},
+  args: { label: 'label', placeholder: 'Digita', error: ""},
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -22,5 +22,11 @@ export const InputDefault: Story = {
 export const InputError: Story = {
   args: {
     error: "Error"
+  }
+}
+
+export const InputWithLength: Story = {
+  args: {
+    maxLength: 100
   }
 }
