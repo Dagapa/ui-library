@@ -5,7 +5,9 @@
   --ui-color-neutral-light: #f2f2f2;
   --ui-color-neutral-dark: #040C16;
   --ui-color-disabled: #D6D6D6;
-  --ui-color-error: #e5484d;
+  --ui-color-error: #D90000;
+  --ui-color-disabled-strong: #767676;
+  --ui-color-placeholder-muted: #B3BBC6;
 
 
   --ui-color-bg-default: #ffffff;
@@ -34,7 +36,7 @@
 
   --ui-font-size-button: 0.875rem;
   --ui-font-size-caption: 0.75rem;
-  --ui-font-size-label: 0.625rem;
+  --ui-font-size-label: 0.75rem;
 
   --ui-font-weight-regular: 400;
   --ui-font-weight-medium: 500;

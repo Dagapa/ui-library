@@ -1,32 +1,45 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Input } from '@ui-library/react'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Input } from "@ui-library/react";
+import { within } from "storybook/test";
 
 const meta = {
-  title: 'Input',
+  title: "Sorin/Input",
   component: Input,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
-  args: { label: 'label', placeholder: 'Digita', error: ""},
+  tags: ["autodocs"],
+  args: { label: "Label", placeholder: "Digita", disabled: false },
 } satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const InputDefault: Story = {
+export const InputDefault: Story = {};
+
+export const InputActive: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole("textbox");
+    await input.focus()
+  },
+};
+
+export const InputDisabled: Story = {
   args: {
+    disabled: true
   }
-}
+};
 
 export const InputError: Story = {
   args: {
-    error: "Error"
-  }
-}
+    error: "Error",
+  },
+};
 
 export const InputWithLength: Story = {
   args: {
-    maxLength: 100
-  }
-}
+    showCounter: true,
+    maxLength: 100,
+  },
+};

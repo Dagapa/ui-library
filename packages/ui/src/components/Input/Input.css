@@ -1,23 +1,40 @@
 .ui-library-input-wrapper {
-  position: relative;
   width: 350px;
+  position: relative;
 }
 
 .ui-library-input{
   position: relative;
   width: 100%;
-  min-height: 40px;
-  border-radius: var(--ui-radius-md);
-  border: 1px solid var(--ui-color-border-subtle);
-  padding: 5px;
-  padding-left: 17px;
+  height: 40px;
+}
+
+.ui-library-input:focus-within input {
+  border-color: var(--ui-color-secondary);
+  caret-color: var(--ui-color-secondary);
+}
+
+.ui-library-input:focus-within input::placeholder{
+  color: transparent;
+}
+
+.ui-library-input:has(input:disabled) input {
+  border-color: var(--ui-color-disabled-strong);
+  background-color: var(--ui-color-neutral-light);
+}
+
+.ui-library-input:has(input:disabled) label {
+  color: var(--ui-color-disabled-strong);
+}
+
+.ui-library-input:has(input:disabled) input::placeholder {
+  color: var(--ui-color-placeholder-muted);
 }
 
 .ui-library-input label{
-  min-width: 32px;
   height: 17px;
   padding: 0 7px;
-  top: -12px;
+  top: -10px;
   left: 12px;
   color: var(--ui-color-secondary);
   font-weight: var(--ui-font-weight-medium);
@@ -27,42 +44,53 @@
 }
 
 .ui-library-input input{
-  border: none;
   width: 100%;
   height: 100%;
+  border: 1px solid var(--ui-color-border-subtle);
+  border-radius: var(--ui-radius-md);
+  padding: 5px 17px;
   outline: none;
   font-size: var(--ui-font-size-caption);
 }
 
-.ui-library-input--error {
-  border-color: var(--ui-color-error);
+.ui-library-input input::placeholder{
+  font-size: var(--ui-font-size-caption);
+  font-weight: var(--ui-font-weight-regular);
 }
 
-.ui-library-input--error label {
+.ui-library-input.ui-library-input--error input {
+  border-color: var(--ui-color-error);
   color: var(--ui-color-error);
 }
 
-.ui-library-input--error input::placeholder {
+.ui-library-input.ui-library-input--error label {
+  color: var(--ui-color-error);
+}
+
+.ui-library-input.ui-library-input--error input::placeholder {
+  color: var(--ui-color-error);
+}
+
+.ui-library-input--error .ui-library-input__counter {
   color: var(--ui-color-error);
 }
 
 .ui-library-input__error {
-  position: absolute;
-  top: 100%;
-  left: 0;
   display: flex;
   align-items: center;
   gap: var(--ui-space-1);
+  position: absolute;
+  bottom: -33px;
   margin: 0;
-  padding-top: var(--ui-space-1);
+  margin-top: var(--ui-space-1);
 }
 
 .ui-library-input__error-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   background-color: var(--ui-color-error);
   border-radius: 100%;
   flex-shrink: 0;
@@ -76,6 +104,7 @@
 
 .ui-library-input__counter {
   position: absolute;
+  bottom: -30px;
   right: -25px;
   font-size: var(--ui-font-size-caption);
   font-weight: var(--ui-font-weight-medium);

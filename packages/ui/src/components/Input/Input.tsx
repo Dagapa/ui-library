@@ -5,19 +5,19 @@ import './Input.css'
 export interface InputProps extends ComponentPropsWithRef<'input'> {
   label: string;
   error?: string;
-  maxLength?: number
+  showCounter?: boolean
 }
 
-export function Input({ label, error, maxLength, ...props }: InputProps) {
+export function Input({ label, error, showCounter = false, ...props }: InputProps) {
   return (
     <div className="ui-library-input-wrapper">
-      <fieldset className={`ui-library-input${error ? ' ui-library-input--error' : ''}`}>
-        <label>{label}</label>
-        <input maxLength={maxLength} {...props} />
-      </fieldset>
-      {maxLength && (
+      <div className={`ui-library-input${error ? ' ui-library-input--error' : ''}`}>
+        <label htmlFor={props.id}>{label}</label>
+        <input {...props} />
+      </div>
+      {showCounter && props.maxLength && (
         <span className="ui-library-input__counter">
-          0/{maxLength}
+          0/{props.maxLength}
         </span>
       )}
       {error && (
