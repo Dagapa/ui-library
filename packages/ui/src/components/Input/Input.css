@@ -61,6 +61,7 @@
 .ui-library-input.ui-library-input--error input {
   border-color: var(--ui-color-error);
   color: var(--ui-color-error);
+  caret-color: var(--ui-color-error);
 }
 
 .ui-library-input.ui-library-input--error label {
