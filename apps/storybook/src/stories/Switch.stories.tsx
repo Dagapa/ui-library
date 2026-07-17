@@ -8,7 +8,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: { label: 'Label', checked: false},
+  args: { label: 'Label'},
 } satisfies Meta<typeof Switch>;
 
 export default meta;
@@ -18,6 +18,6 @@ export const SwitchDefault: Story = {}
 
 export const SwitchActive: Story = {
   args: {
-    checked: true
+    defaultChecked: true
   }
 }

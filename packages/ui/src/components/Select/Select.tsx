@@ -1,5 +1,6 @@
 import { Select as BaseSelect } from "@base-ui/react/select";
 import "./Select.css";
+import ArrowIcon from "../../assets/icons/ArrowIcon";
 
 export interface SelectOption {
   label: string;
@@ -47,7 +48,7 @@ export function Select({
             placeholder={placeholder}
             className="ui-library-select__value"
           />
-          <IconArrow className="ui-library-select__icon" />
+          <ArrowIcon className="ui-library-select__icon" />
         </BaseSelect.Trigger>
       </div>
       <BaseSelect.Portal>
@@ -76,21 +77,3 @@ export function Select({
   );
 }
 
-function IconArrow({ className }: { className: string }) {
-  return (
-    <span className={className}>
-      <svg
-        width="10"
-        height="6"
-        viewBox="0 0 10 6"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M0 0.485107L0.00511176 0.478779C0.0444302 0.42958 0.0761881 0.372617 0.113759 0.320693C0.237526 0.149638 0.385797 0.0366891 0.598594 0.00947228C1.00438 -0.0424223 1.229 0.226259 1.49097 0.488496L1.95616 0.954736L3.88633 2.88545L4.52963 3.5288C4.61057 3.60976 4.92186 3.94435 5.01203 3.96264C5.09092 3.92402 5.56501 3.43307 5.66674 3.3313L7.53853 1.45878L8.26637 0.730732C8.33592 0.661171 8.40655 0.591689 8.47685 0.520234C8.77229 0.219912 9.0505 -0.11501 9.51818 0.0385444C9.7707 0.121464 9.85205 0.288671 10 0.489902V0.880751L9.99385 0.888623C9.92041 0.984267 9.87207 1.09029 9.78926 1.18444C9.68755 1.30011 9.57703 1.40581 9.46813 1.51455L8.92238 2.05966L7.18143 3.80121L6.05804 4.92535C5.93095 5.05256 5.80456 5.18076 5.67697 5.30742C5.53793 5.44376 5.39325 5.60452 5.20034 5.65958C4.98079 5.72225 4.73166 5.66973 4.55557 5.52454C4.38555 5.38435 4.22672 5.21419 4.07037 5.05731L3.26744 4.25328L0.401582 1.38937C0.262375 1.2509 0.152522 1.13277 0.0504149 0.962265C0.0368686 0.939648 0.0184013 0.904462 0 0.887929V0.485107Z"
-          fill="currentColor"
-        />
-      </svg>
-    </span>
-  );
-}
