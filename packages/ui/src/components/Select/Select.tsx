@@ -7,7 +7,7 @@ export interface SelectOption {
 }
 
 export interface SelectProps {
-  label?: string;
+  label: string;
   placeholder?: string;
   options: SelectOption[];
   value?: string;
@@ -39,11 +39,9 @@ export function Select({
       <div
         className={["ui-library-select", className].filter(Boolean).join(" ")}
       >
-        {label && (
-          <BaseSelect.Label className="ui-library-select__label">
-            {label}
-          </BaseSelect.Label>
-        )}
+        <BaseSelect.Label className="ui-library-select__label">
+          {label}
+        </BaseSelect.Label>
         <BaseSelect.Trigger className="ui-library-select__trigger">
           <BaseSelect.Value
             placeholder={placeholder}

@@ -8,7 +8,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: { label: 'Label' },
+  args: { label: 'Label', checked: false},
 } satisfies Meta<typeof Switch>;
 
 export default meta;
