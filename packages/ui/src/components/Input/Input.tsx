@@ -20,7 +20,7 @@ export function Input({
         className={`ui-library-input${error ? " ui-library-input--error" : ""}`}
       >
         <span className="ui-library-input__span">{label}</span>
-        <input {...props} />
+        <input {...props} placeholder=" " />
       </label>
       {showCounter && props.maxLength && (
         <span className="ui-library-input__counter">0/{props.maxLength}</span>

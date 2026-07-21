@@ -1,23 +1,76 @@
+/* =========================================
+   1. Base
+   ========================================= */
+
 .ui-library-input-wrapper {
   width: 350px;
   position: relative;
 }
 
-.ui-library-input{
+.ui-library-input {
   display: inline-block;
   position: relative;
   width: 100%;
   height: 40px;
 }
 
+.ui-library-input input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--ui-color-border-subtle);
+  border-radius: var(--ui-radius-md);
+  padding: 5px 17px;
+  outline: none;
+  font-size: var(--ui-font-size-caption);
+}
+
+.ui-library-input input::placeholder {
+  font-size: var(--ui-font-size-caption);
+  font-weight: var(--ui-font-weight-regular);
+}
+
+.ui-library-input .ui-library-input__span {
+  height: 17px;
+  padding: 0 7px;
+  top: 17px;
+  left: 12px;
+  color: var(--ui-color-secondary);
+  font-weight: var(--ui-font-weight-medium);
+  background-color: var(--ui-color-bg-default);
+  position: absolute;
+  font-size: var(--ui-font-size-label);
+  transition: transform var(--ui-transition-fast);
+  user-select: none;
+}
+
+/* =========================================
+   2. Focus
+   ========================================= */
+
 .ui-library-input:focus-within input {
   border-color: var(--ui-color-secondary);
   caret-color: var(--ui-color-secondary);
 }
 
-.ui-library-input:focus-within input::placeholder{
+.ui-library-input:focus-within input::placeholder {
   color: transparent;
 }
+
+.ui-library-input:focus-within .ui-library-input__span {
+  transform: translateY(-26px) scale(1.1);
+}
+
+/* =========================================
+   3. With value
+   ========================================= */
+
+.ui-library-input:has(input:not(:placeholder-shown)) .ui-library-input__span {
+  transform: translateY(-26px) scale(1.1);
+}
+
+/* =========================================
+   4. Disabled
+   ========================================= */
 
 .ui-library-input:has(input:disabled) input {
   border-color: var(--ui-color-disabled-strong);
@@ -33,38 +86,9 @@
   color: var(--ui-color-placeholder-muted);
 }
 
-.ui-library-input .ui-library-input__span{
-  height: 17px;
-  padding: 0 7px;
-  top: 17px;
-  left: 12px;
-  color: var(--ui-color-secondary);
-  font-weight: var(--ui-font-weight-medium);
-  background-color: var(--ui-color-bg-default);
-  position: absolute;
-  font-size: var(--ui-font-size-label);
-  transition: transform var(--ui-transition-fast);
-  user-select: none;
-}
-
-.ui-library-input:focus-within .ui-library-input__span {
-  transform: translateY(-26px) scale(1.1);
-}
-
-.ui-library-input input{
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--ui-color-border-subtle);
-  border-radius: var(--ui-radius-md);
-  padding: 5px 17px;
-  outline: none;
-  font-size: var(--ui-font-size-caption);
-}
-
-.ui-library-input input::placeholder{
-  font-size: var(--ui-font-size-caption);
-  font-weight: var(--ui-font-weight-regular);
-}
+/* =========================================
+   5. Error
+   ========================================= */
 
 .ui-library-input.ui-library-input--error input {
   border-color: var(--ui-color-error);
@@ -100,6 +124,10 @@
   font-size: var(--ui-font-size-caption);
   font-weight: var(--ui-font-weight-regular);
 }
+
+/* =========================================
+   6. Counter
+   ========================================= */
 
 .ui-library-input__counter {
   position: absolute;

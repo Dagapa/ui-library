@@ -14,7 +14,7 @@ export function TooltipButton({
   ...props
 }: TooltipButtonProps) {
   return (
-    <Tooltip.Provider>
+    <Tooltip.Provider delay={100}>
       <Tooltip.Root>
         <Tooltip.Trigger className="ui-library-tooltip__button" {...props}>
           <HomeIcon />
