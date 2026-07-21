@@ -1,0 +1,38 @@
+/* Base */
+.ui-library-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: var(--ui-color-bg-default);
+  color: var(--ui-color-secondary);
+  border: 1px solid var(--ui-color-secondary);
+  border-radius: var(--ui-radius-md);
+  cursor: pointer;
+  transition: background-color var(--ui-transition-fast),
+              border-color var(--ui-transition-fast),
+              color var(--ui-transition-fast),
+              transform var(--ui-transition-fast);
+}
+
+/* Hover */
+.ui-library-back-button:hover:not(:disabled) {
+  color: var(--ui-color-accent-hover);
+  border-color: var(--ui-color-accent-hover);
+}
+
+/* Pressed (active) */
+.ui-library-back-button:active:not(:disabled) {
+  color: var(--ui-color-accent-active);
+  border-color: var(--ui-color-accent-active);
+  transform: scale(0.97);
+}
+
+/* Disabled */
+.ui-library-back-button:disabled {
+  color: var(--ui-color-bg-disabled);
+  border-color: var(--ui-color-bg-disabled);
+  cursor: not-allowed;
+}

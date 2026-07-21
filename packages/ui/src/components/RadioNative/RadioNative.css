@@ -1,0 +1,87 @@
+/* =========================================
+   1. Base
+   ========================================= */
+
+.ui-library-radio-native {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.ui-library-radio-native__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ui-library-radio-native__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--ui-color-border-subtle);
+  border-radius: 50%;
+  background-color: var(--ui-color-bg-default);
+  transition: background-color var(--ui-transition-fast),
+              border-color var(--ui-transition-fast);
+}
+
+.ui-library-radio-native__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--ui-color-bg-default);
+  opacity: 0;
+  transition: opacity var(--ui-transition-fast);
+}
+
+.ui-library-radio-native__label {
+  font-size: var(--ui-font-size-body-md);
+  font-weight: var(--ui-font-weight-regular);
+  color: var(--ui-color-fg-default);
+  line-height: var(--ui-line-height-ui);
+  user-select: none;
+}
+
+/* =========================================
+   2. Checked
+   ========================================= */
+
+.ui-library-radio-native__input:checked + .ui-library-radio-native__box {
+  border-color: var(--ui-color-secondary);
+  background-color: var(--ui-color-secondary);
+}
+
+.ui-library-radio-native__input:checked + .ui-library-radio-native__box .ui-library-radio-native__indicator {
+  opacity: 1;
+}
+
+/* =========================================
+   3. Hover
+   ========================================= */
+
+.ui-library-radio-native:hover:not(.ui-library-radio-native--disabled) .ui-library-radio-native__box {
+  border-color: var(--ui-color-secondary);
+}
+
+/* =========================================
+   4. Disabled
+   ========================================= */
+
+.ui-library-radio-native--disabled {
+  cursor: not-allowed;
+}
+
+.ui-library-radio-native--disabled .ui-library-radio-native__box {
+  border-color: var(--ui-color-disabled);
+  background-color: var(--ui-color-bg-disabled);
+}
+
+.ui-library-radio-native--disabled .ui-library-radio-native__label {
+  color: var(--ui-color-fg-muted);
+}

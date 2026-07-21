@@ -1,0 +1,31 @@
+.ui-library-logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--ui-color-secondary);
+  border: none;
+  color: var(--ui-color-bg-default);
+  transition: background-color var(--ui-transition-fast);
+}
+
+.ui-library-logout-button:hover {
+  background-color: var(--ui-color-primary-dark);
+}
+
+.ui-library-logout-button__tooltip {
+  background-color: var(--ui-color-bg-default);
+  color: var(--ui-color-neutral-dark);
+  font-size: var(--ui-font-size-caption);
+  font-weight: var(--ui-font-weight-regular);
+  line-height: var(--ui-line-height-ui);
+  padding: 4px 8px;
+  border-radius: var(--ui-radius-md);
+  box-shadow: 1px 2px 2px 0 #00000040;
+  white-space: nowrap;
+  z-index: 1000;
+}

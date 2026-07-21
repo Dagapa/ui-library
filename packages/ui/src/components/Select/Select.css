@@ -48,6 +48,7 @@
 
 .ui-library-select:has(.ui-library-select__trigger[data-disabled]) .ui-library-select__label {
   color: #434343;
+  background: linear-gradient(180deg, var(--ui-color-bg-default) 62%, var(--ui-color-neutral-light) 38%)
 }
 
 .ui-library-select__trigger[data-disabled] .ui-library-select__value {
