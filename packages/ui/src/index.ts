@@ -7,3 +7,4 @@ export { Radio } from './components/Radio';
 export { Switch } from './components/Switch';
 export { Select } from './components/Select';
 export { Tabs } from './components/Tabs';
+export { TooltipButton } from './components/TooltipButton';
