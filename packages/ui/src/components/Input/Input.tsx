@@ -2,7 +2,7 @@ import { ComponentPropsWithRef } from "react";
 import ErrorIcon from "../../assets/icons/ErrorIcon";
 import "./Input.css";
 
-export interface InputProps extends ComponentPropsWithRef<"input"> {
+export interface InputProps extends Omit<ComponentPropsWithRef<"input">, 'placeholder'> {
   label: string;
   error?: string;
   showCounter?: boolean;
@@ -16,12 +16,12 @@ export function Input({
 }: InputProps) {
   return (
     <div className="ui-library-input-wrapper">
-      <div
+      <label
         className={`ui-library-input${error ? " ui-library-input--error" : ""}`}
       >
-        <label htmlFor={props.id}>{label}</label>
+        <span className="ui-library-input__span">{label}</span>
         <input {...props} />
-      </div>
+      </label>
       {showCounter && props.maxLength && (
         <span className="ui-library-input__counter">0/{props.maxLength}</span>
       )}

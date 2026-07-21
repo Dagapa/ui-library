@@ -9,7 +9,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: { label: "Label", placeholder: "Digita", disabled: false },
+  args: { label: "Label", disabled: false },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -21,14 +21,14 @@ export const InputActive: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByRole("textbox");
-    await input.focus()
+    await input.focus();
   },
 };
 
 export const InputDisabled: Story = {
   args: {
-    disabled: true
-  }
+    disabled: true,
+  },
 };
 
 export const InputError: Story = {
