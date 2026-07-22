@@ -3,9 +3,9 @@
    ========================================= */
 
 .ui-library-input-wrapper {
-  display: inline-flex;
-  flex-direction: column;
+  min-width: 350px;
   position: relative;
+  margin: 5px 5px 23px 5px;
 }
 
 .ui-library-input {
@@ -34,7 +34,7 @@
 .ui-library-input .ui-library-input__span {
   height: 17px;
   padding: 0 7px;
-  top: 12px;
+  top: 10px;
   left: 12px;
   color: var(--ui-color-secondary);
   font-weight: var(--ui-font-weight-medium);
@@ -59,7 +59,7 @@
 }
 
 .ui-library-input:focus-within .ui-library-input__span {
-  transform: translateY(-21px) scale(1.1);
+  transform: translateY(-19px) scale(1.1);
 }
 
 /* =========================================
@@ -67,7 +67,7 @@
    ========================================= */
 
 .ui-library-input:has(input:not(:placeholder-shown)) .ui-library-input__span {
-  transform: translateY(-26px) scale(1.1);
+  transform: translateY(-19px) scale(1.1);
 }
 
 /* =========================================
@@ -114,6 +114,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
   gap: var(--ui-space-1);
   margin: 0;
   margin-top: var(--ui-space-1);
@@ -131,8 +134,8 @@
 
 .ui-library-input__counter {
   position: absolute;
-  bottom: -30px;
-  right: -25px;
+  bottom: -19px;
+  right: 10px;
   font-size: var(--ui-font-size-caption);
   font-weight: var(--ui-font-weight-medium);
   color: var(--ui-color-fg-default);

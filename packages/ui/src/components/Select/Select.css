@@ -2,15 +2,16 @@
   display: inline-flex;
   flex-direction: column;
   position: relative;
-  width: 350px;
+  min-width: 350px;
   height: 40px;
+  margin: 5px 5px 23px;
   gap: var(--ui-space-1);
   font-family: var(--ui-font-sans);
 }
 
 .ui-library-select__label {
   font-size: var(--ui-font-size-label);
-  font-weight: var(--ui-font-weight-regular);
+  font-weight: var(--ui-font-weight-medium);
   color: var(--ui-color-secondary);
   background-color: var(--ui-color-bg-default);
   position: absolute;
@@ -32,7 +33,7 @@
   border-radius: var(--ui-radius-md);
   padding: var(--ui-space-3) var(--ui-space-4);
   font-family: var(--ui-font-sans);
-  font-size: var(--ui-font-size-body-md);
+  font-size: var(--ui-font-size-caption);
   line-height: var(--ui-line-height-ui);
   cursor: pointer;
   transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast),

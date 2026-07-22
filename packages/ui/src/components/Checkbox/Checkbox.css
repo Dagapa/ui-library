@@ -9,8 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 2px solid var(--ui-color-border-subtle);
   border-radius: var(--ui-radius-sm);
   background-color: var(--ui-color-bg-default);
@@ -50,7 +50,7 @@
 }
 
 .ui-library-checkbox__label {
-  font-size: var(--ui-font-size-body-md);
+  font-size: var(--ui-font-size-label);
   font-weight: var(--ui-font-weight-regular);
   color: var(--ui-color-fg-default);
   line-height: var(--ui-line-height-ui);
