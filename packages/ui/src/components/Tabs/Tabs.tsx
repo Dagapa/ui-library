@@ -1,3 +1,5 @@
+'use client';
+
 import { Tabs as BaseTabs } from "@base-ui/react/tabs";
 import type { TabsRootProps } from "@base-ui/react/tabs";
 import "./Tabs.css";

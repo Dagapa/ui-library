@@ -1,3 +1,5 @@
+'use client';
+
 import { Select as BaseSelect } from "@base-ui/react/select";
 import "./Select.css";
 import ArrowIcon from "../../assets/icons/ArrowIcon";

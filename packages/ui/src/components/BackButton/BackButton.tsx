@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@base-ui/react/button';
 import type { ButtonProps } from '@base-ui/react/button';
 import ArrowLeftIcon from '../../assets/icons/ArrowLeftIcon';

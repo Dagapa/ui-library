@@ -1,3 +1,5 @@
+'use client';
+
 import { RadioGroup as BaseRadioGroup } from "@base-ui/react/radio-group";
 import type { RadioGroupProps as BaseRadioGroupProps } from "@base-ui/react/radio-group";
 import { Radio as BaseRadio } from "@base-ui/react/radio";

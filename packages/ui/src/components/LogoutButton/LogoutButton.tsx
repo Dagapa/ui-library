@@ -1,3 +1,5 @@
+'use client';
+
 import { Tooltip } from "@base-ui/react/tooltip";
 import LogoutIcon from "../../assets/icons/LogoutIcon";
 import type { ComponentPropsWithRef } from "react";

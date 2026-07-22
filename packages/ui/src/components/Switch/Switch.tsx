@@ -1,3 +1,5 @@
+'use client';
+
 import { Switch as BaseUISwitch } from "@base-ui/react";
 import type { SwitchRootProps } from '@base-ui/react'
 import './Switch.css'

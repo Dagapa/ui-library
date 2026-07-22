@@ -4,18 +4,20 @@
 	"private": false,
 	"type": "module",
 	"sideEffects": false,
-	"main": "./dist/ui-library-react.cjs",
-	"module": "./dist/ui-library-react.js",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/ui-library-react.js",
-			"require": "./dist/ui-library-react.cjs"
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		},
 		"./style.css": "./dist/ui-library-react.css"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "vite build",
 		"dev": "vite build --watch",
@@ -34,6 +36,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react": "^6.0.3",
 		"oxlint": "^1.71.0",
+		"rollup-plugin-preserve-directives": "^0.4.0",
 		"typescript": "~6.0.2",
 		"vite": "^8.1.1",
 		"vite-plugin-dts": "^4.5.0"

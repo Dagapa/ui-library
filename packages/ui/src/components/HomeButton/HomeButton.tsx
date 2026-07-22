@@ -1,3 +1,5 @@
+'use client';
+
 import { Tooltip } from "@base-ui/react/tooltip";
 import HomeIcon from "../../assets/icons/HomeIcon";
 import type { ComponentPropsWithRef } from "react";
