@@ -9,7 +9,7 @@ export { Switch } from './components/Switch';
 export { Select } from './components/Select';
 export { Tabs } from './components/Tabs';
 export { BackButton } from './components/BackButton';
-export { HomeButton } from './components/HomeButton';
+export { Tooltip } from './components/Tooltip';
 export { LogoutButton } from './components/LogoutButton';
 export { IconButton } from './components/IconButton'
 
