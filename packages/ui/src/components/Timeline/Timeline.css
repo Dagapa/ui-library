@@ -1,0 +1,99 @@
+/* =========================================
+   1. Base
+   ========================================= */
+
+.ui-library-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 53px;
+}
+
+/* =========================================
+   2. Item
+   ========================================= */
+
+.ui-library-timeline__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   3. Indicator (dot + label)
+   ========================================= */
+
+.ui-library-timeline__dot-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 94px;
+  height: 58px;
+  position: relative;
+}
+
+.ui-library-timeline__dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--ui-color-disabled);
+  border: 2px solid var(--ui-color-disabled);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.ui-library-timeline__label {
+  font-size: var(--ui-font-size-body-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-disabled);
+  line-height: 1.25rem;
+  margin-top: var(--ui-space-2);
+  text-align: center;
+}
+/* =========================================
+   4. Line
+   ========================================= */
+
+.ui-library-timeline__line {
+  position: absolute;
+  top: 17px;
+  right: -61px;
+  height: 2px;
+  flex: 1;
+  background-color: var(--ui-color-disabled);
+  min-width: 68px;
+}
+
+/* =========================================
+   5. Active state
+   ========================================= */
+
+.ui-library-timeline__item--active .ui-library-timeline__dot {
+  background-color: var(--ui-color-secondary);
+  border-color: var(--ui-color-secondary);
+}
+
+.ui-library-timeline__item--active .ui-library-timeline__label {
+  color: var(--ui-color-secondary);
+  font-weight: var(--ui-font-weight-semibold);
+}
+
+.ui-library-timeline__item--active .ui-library-timeline__line {
+  background-color: var(--ui-color-secondary);
+}
+
+/* =========================================
+   6. Completed state
+   ========================================= */
+
+.ui-library-timeline__item--completed .ui-library-timeline__dot {
+  background-color: #B2EBB9;
+  border-color: #B2EBB9;
+}
+
+.ui-library-timeline__item--completed .ui-library-timeline__line {
+  background-color: #B2EBB9;
+}
