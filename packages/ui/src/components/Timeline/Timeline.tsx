@@ -31,9 +31,6 @@ export function Timeline({ items, activeValue }: TimelineProps) {
                 {isCompleted ? (<CheckLigthIcon/>) : (<MagnifyingGlassIcon/>)}
               </div>
               <span className="ui-library-timeline__label">{item.label}</span>
-            {index < items.length - 1 && (
-              <div className="ui-library-timeline__line" />
-            )}
             </div>
           </div>
         );

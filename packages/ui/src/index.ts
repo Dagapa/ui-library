@@ -13,6 +13,7 @@ export { Tooltip } from './components/Tooltip';
 export { LogoutButton } from './components/LogoutButton';
 export { IconButton } from './components/IconButton'
 export { Timeline } from './components/Timeline'
+export { Modal } from './components/Modal'
 
 export { default as ArrowLeftIcon } from './assets/icons/ArrowLeftIcon';
 export { default as ArrowIcon } from './assets/icons/ArrowIcon';

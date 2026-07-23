@@ -29,13 +29,14 @@
   flex-direction: column;
   width: 94px;
   height: 58px;
-  position: relative;
+  /* position: relative; */
 }
 
 .ui-library-timeline__dot {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -56,6 +57,21 @@
 /* =========================================
    4. Line
    ========================================= */
+
+.ui-library-timeline__dot::before{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 56px;
+  height: 2px;
+  flex: 1;
+  background-color: var(--ui-color-disabled);
+  min-width: 68px;
+}
+
+.ui-library-timeline__item:last-child .ui-library-timeline__dot::before{
+  display: none;
+}
 
 .ui-library-timeline__line {
   position: absolute;
@@ -81,7 +97,7 @@
   font-weight: var(--ui-font-weight-semibold);
 }
 
-.ui-library-timeline__item--active .ui-library-timeline__line {
+.ui-library-timeline__item--active .ui-library-timeline__dot::before {
   background-color: var(--ui-color-secondary);
 }
 
@@ -94,6 +110,6 @@
   border-color: #B2EBB9;
 }
 
-.ui-library-timeline__item--completed .ui-library-timeline__line {
+.ui-library-timeline__item--completed .ui-library-timeline__dot::before {
   background-color: #B2EBB9;
 }

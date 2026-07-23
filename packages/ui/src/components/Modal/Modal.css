@@ -1,0 +1,43 @@
+/* =========================================
+   1. Backdrop
+   ========================================= */
+
+.ui-library-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: #00000080;
+  z-index: 1000;
+}
+
+/* =========================================
+   2. Popup
+   ========================================= */
+
+.ui-library-modal__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--ui-color-bg-default);
+  border-radius: var(--ui-radius-lg);
+  padding: var(--ui-space-4);
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 90vh;
+  min-height: 100px;
+  overflow: visible;
+  z-index: 1001;
+  border: 1px solid #E6E6E6;
+  outline: none;
+}
+
+.ui-library-modal__popup::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -1px;
+  right: -1px;
+  height: 5px;
+  background-color: var(--ui-color-neutral-dark);
+  border-radius: 2px;
+}
