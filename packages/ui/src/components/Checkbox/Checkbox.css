@@ -38,6 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--ui-color-bg-default)
 }
 
 .ui-library-checkbox__indicator[data-unchecked] {
