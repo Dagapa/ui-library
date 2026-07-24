@@ -1,3 +1,5 @@
+"use client"
+
 import { ReactNode } from "react";
 import { Dialog } from "@base-ui/react/dialog";
 import "./Modal.css";

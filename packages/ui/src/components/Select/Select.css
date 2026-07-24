@@ -2,9 +2,9 @@
   display: inline-flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
   min-width: 350px;
   height: 40px;
-  margin: 5px 5px 23px;
   gap: var(--ui-space-1);
   font-family: var(--ui-font-sans);
 }
