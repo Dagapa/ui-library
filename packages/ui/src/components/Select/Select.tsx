@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Select as BaseSelect } from "@base-ui/react/select";
 import "./Select.css";
@@ -50,7 +50,9 @@ export function Select({
             placeholder={placeholder}
             className="ui-library-select__value"
           />
-          <ArrowIcon className="ui-library-select__icon" />
+          <span className="ui-library-select__icon">
+            <ArrowIcon />
+          </span>
         </BaseSelect.Trigger>
       </div>
       <BaseSelect.Portal>
@@ -78,4 +80,3 @@ export function Select({
     </BaseSelect.Root>
   );
 }
-

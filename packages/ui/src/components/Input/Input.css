@@ -140,3 +140,15 @@
   font-weight: var(--ui-font-weight-medium);
   color: var(--ui-color-fg-default);
 }
+
+.ui-library-input__icon{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: var(--ui-color-secondary);
+  cursor: pointer;
+}
+
+.ui-library-input--has-icon input {
+  padding-right: 34px;
+}

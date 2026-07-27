@@ -18,3 +18,5 @@ export { default as HomeIcon } from './assets/icons/HomeIcon';
 export { default as LogoutIcon } from './assets/icons/LogoutIcon';
 export { default as CheckIcon } from './assets/icons/CheckIcon';
 export { default as ErrorIcon } from './assets/icons/ErrorIcon';
+export { default as EyeSlashIcon } from './assets/icons/EyeSlashIcon'
+export { default as ShowPasswordIcon } from './assets/icons/ShowPasswordIcon'

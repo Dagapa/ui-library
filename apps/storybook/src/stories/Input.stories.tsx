@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Input } from "@ui-library/react";
 import { within } from "storybook/test";
+import { EyeSlashIcon } from '@ui-library/react'
 
 const meta = {
   title: "Sorin/Input",
@@ -28,6 +29,12 @@ export const InputActive: Story = {
 export const InputDisabled: Story = {
   args: {
     disabled: true,
+  },
+};
+
+export const InputWithIcon: Story = {
+  args: {
+    icon: <EyeSlashIcon/>
   },
 };
 
