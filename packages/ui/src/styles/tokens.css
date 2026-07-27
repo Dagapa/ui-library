@@ -1,3 +1,8 @@
+@import '@fontsource/rubik/400.css';
+@import '@fontsource/rubik/500.css';
+@import '@fontsource/rubik/600.css';
+@import '@fontsource/rubik/700.css';
+
 :root {
   --ui-color-primary: #4bdbe6;
   --ui-color-primary-dark: #0d4f5e;
@@ -22,7 +27,7 @@
   --ui-color-fg-default: var(--ui-color-neutral-dark);
   --ui-color-fg-muted: var(--ui-color-disabled);
 
-  --ui-font-family-brand: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ui-font-family-brand: 'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --ui-font-sans: var(--ui-font-family-brand);
 
   --ui-font-size-h1: 3rem;
