@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   border-radius: var(--ui-radius-md);
   padding: var(--ui-space-3) var(--ui-space-4);
   font-family: var(--ui-font-sans);
