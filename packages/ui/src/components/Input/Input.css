@@ -80,8 +80,8 @@
 }
 
 .ui-library-input:has(input:disabled) .ui-library-input__span {
+  background: linear-gradient(180deg, transparent 52%, var(--ui-color-neutral-light) 48%);
   color: var(--ui-color-disabled-strong);
-  background-color: transparent;
 }
 
 .ui-library-input:has(input:disabled) input::placeholder {

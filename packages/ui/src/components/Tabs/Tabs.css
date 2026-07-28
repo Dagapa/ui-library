@@ -2,18 +2,18 @@
   display: inline-flex;
   flex-direction: column;
   width: fit-content;
-  height: 42px;
+  height: 32px;
   background-color: #EDEEF1;
   box-shadow: 2px 2px 4px 0 #00000026 inset;
   border-radius: var(--ui-radius-md);
-  padding: 11px 20px;
+  padding: 6px 12px;
 }
 
 .ui-library-tabs__list {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 42px;
+  height: 100%;
   position: relative;
 }
 
@@ -21,11 +21,12 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  padding: 10px 20px;
+  padding: 7px 20px;
   background-color: transparent;
   border: none;
-  font-size: var(--ui-font-size-button);
-  font-weight: var(--ui-font-weight-semibold);
+  font-family: var(--ui-font-sans);
+  font-size: var(--ui-font-size-caption);
+  font-weight: var(--ui-font-weight-medium);
   color: var(--ui-color-disabled-strong);
   white-space: nowrap;
   cursor: pointer;

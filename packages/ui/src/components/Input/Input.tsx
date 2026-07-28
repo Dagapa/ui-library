@@ -9,6 +9,7 @@ export interface InputProps extends Omit<
   label: string;
   error?: string;
   icon?: ReactElement;
+  className?: string;
   toogleIcon?: () => void;
   showCounter?: boolean;
 }
@@ -18,17 +19,26 @@ export function Input({
   error,
   icon,
   toogleIcon,
+  className,
   showCounter = false,
   ...props
 }: InputProps) {
   return (
-    <div className="ui-library-input-wrapper">
+    <div
+      className={[`ui-library-input-wrapper`, className]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <label
         className={`ui-library-input${error ? " ui-library-input--error" : ""}${icon ? " ui-library-input--has-icon" : ""}`}
       >
         <span className="ui-library-input__span">{label}</span>
         <input {...props} placeholder=" " />
-        {icon && <span className="ui-library-input__icon" onClick={toogleIcon}>{icon}</span>}
+        {icon && (
+          <span className="ui-library-input__icon" onClick={toogleIcon}>
+            {icon}
+          </span>
+        )}
       </label>
       {showCounter && props.maxLength && (
         <span className="ui-library-input__counter">0/{props.maxLength}</span>

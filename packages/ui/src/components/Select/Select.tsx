@@ -23,7 +23,7 @@ export interface SelectProps {
 
 export function Select({
   label,
-  placeholder = "Selecciona",
+  placeholder,
   options,
   className,
   onValueChange,
