@@ -1,21 +1,42 @@
-"use client"
+"use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { Dialog } from "@base-ui/react/dialog";
 import "./Modal.css";
 
 export interface ModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
+  isOpenModal: boolean;
   children: ReactNode;
+  autoClose: boolean;
+  closeModal: () => void;
 }
 
-export function Modal({ open, onOpenChange, children }: ModalProps) {
+export function Modal({
+  isOpenModal,
+  closeModal,
+  children,
+  autoClose,
+}: ModalProps) {
+  const popupRef = useRef<HTMLDivElement>(null);
+
   return (
-    <Dialog.Root open={open} onOpenChange={onOpenChange}>
+    <Dialog.Root
+      open={isOpenModal}
+      onOpenChange={(open) => {
+        if (!open && autoClose) closeModal();
+      }}
+    >
       <Dialog.Portal>
-        <Dialog.Backdrop className="ui-library-modal__backdrop" />
-        <Dialog.Popup className="ui-library-modal__popup">
+        <Dialog.Backdrop
+          className="ui-library-modal__backdrop"
+          onClick={autoClose ? closeModal : undefined}
+        />
+        <Dialog.Popup
+          ref={popupRef}
+          className="ui-library-modal__popup"
+          initialFocus={popupRef}
+          finalFocus={false}
+        >
           {children}
         </Dialog.Popup>
       </Dialog.Portal>
