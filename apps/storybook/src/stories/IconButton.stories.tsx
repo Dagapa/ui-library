@@ -12,7 +12,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    variant: { control: "radio", options: ["main", "secondary"] },
+    variant: { control: "radio", options: ["main", "secondary", "danger"] },
     icon: { control: false },
   },
   args: { onClick: fn(), icon: <ArrowLeftIcon /> },

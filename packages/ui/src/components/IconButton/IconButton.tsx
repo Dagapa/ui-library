@@ -2,7 +2,7 @@ import { ComponentPropsWithRef, ReactNode } from "react";
 import "./IconButton.css";
 
 export interface IconButtonProps extends ComponentPropsWithRef<"button"> {
-  variant?: "main" | "secondary";
+  variant?: "main" | "secondary" | "danger";
   icon: ReactNode;
   rounded?: boolean;
 }

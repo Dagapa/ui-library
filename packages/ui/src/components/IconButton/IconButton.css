@@ -51,6 +51,25 @@
   cursor: not-allowed
 }
 
+.ui-library-icon-button__danger {
+  background-color: #db4d52;
+  color: var(--ui-color-bg-default);
+}
+
+.ui-library-icon-button__danger:hover:not(:disabled) {
+  background-color: #d02b31;
+}
+
+.ui-library-icon-button__danger:active:not(:disabled) {
+  background-color: var(--ui-color-accent-active);
+}
+
+.ui-library-icon-button__danger:disabled {
+  background-color: var(--ui-color-bg-disabled);
+  cursor: not-allowed;
+}
+
 .ui-library-icon-button__rounded{
   border-radius: 100%;
 }
+
