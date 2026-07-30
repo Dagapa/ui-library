@@ -6,13 +6,13 @@ import CheckIcon from "../../assets/icons/CheckIcon";
 import "./Checkbox.css";
 
 export interface CheckboxProps extends Omit<CheckboxRootProps, "render"> {
-  label?: string;
+  className?: string;
 }
 
-export function Checkbox({ label = "", ...props }: CheckboxProps) {
+export function Checkbox({className, ...props}: CheckboxProps) {
 
   return (
-    <label className="ui-library-checkbox">
+    <label className={["ui-library-checkbox", className].filter(Boolean).join(" ")}>
       <BaseCheckbox.Root className="ui-library-checkbox__box" {...props}>
         <BaseCheckbox.Indicator
           className="ui-library-checkbox__indicator"
@@ -21,7 +21,6 @@ export function Checkbox({ label = "", ...props }: CheckboxProps) {
           <CheckIcon />
         </BaseCheckbox.Indicator>
       </BaseCheckbox.Root>
-      <span className="ui-library-checkbox__label">{label}</span>
     </label>
   );
 }
