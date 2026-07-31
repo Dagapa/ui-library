@@ -1,36 +1,37 @@
+import { ReactElement } from "react";
 import CheckLigthIcon from "../../assets/icons/CheckLigthIcon";
 import MagnifyingGlassIcon from "../../assets/icons/MagnifyingGlassIcon";
 import "./Timeline.css";
 
-export interface TimelineItem {
-  value: string;
+export interface TimelineStep {
+  value: number;
   label: string;
+  icon?: ReactElement;
 }
 
 export interface TimelineProps {
-  items: TimelineItem[];
-  activeValue: string;
+  steps: TimelineStep[];
+  currentStep: number;
 }
 
-export function Timeline({ items, activeValue }: TimelineProps) {
-  const activeIndex = items.findIndex((item) => item.value === activeValue);
+export function Timeline({ steps, currentStep }: TimelineProps) {
 
   return (
     <div className="ui-library-timeline">
-      {items.map((item, index) => {
-        const isCompleted = index < activeIndex;
-        const isActive = item.value === activeValue;
+      {steps.map(({ value, label, icon }) => {
+        const isCompleted = value < currentStep;
+        const isActive = value === currentStep;
 
         return (
           <div
-            key={item.value}
+            key={value}
             className={`ui-library-timeline__item${isCompleted ? " ui-library-timeline__item--completed" : ""}${isActive ? " ui-library-timeline__item--active" : ""}`}
           >
             <div className="ui-library-timeline__dot-container">
               <div className="ui-library-timeline__dot" >
-                {isCompleted ? (<CheckLigthIcon/>) : (<MagnifyingGlassIcon/>)}
+                {isCompleted ? (<CheckLigthIcon/>) : icon ?? <MagnifyingGlassIcon/>}
               </div>
-              <span className="ui-library-timeline__label">{item.label}</span>
+              <span className="ui-library-timeline__label">{label}</span>
             </div>
           </div>
         );

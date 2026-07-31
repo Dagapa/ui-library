@@ -12,6 +12,7 @@ export interface InputProps extends Omit<
   className?: string;
   toogleIcon?: () => void;
   showCounter?: boolean;
+  onInput?: any;
 }
 
 export function Input({
@@ -21,6 +22,7 @@ export function Input({
   toogleIcon,
   className,
   showCounter = false,
+  onInput,
   ...props
 }: InputProps) {
   return (
@@ -33,7 +35,7 @@ export function Input({
         className={`ui-library-input${error ? " ui-library-input--error" : ""}${icon ? " ui-library-input--has-icon" : ""}`}
       >
         <span className="ui-library-input__span">{label}</span>
-        <input {...props} placeholder=" " />
+        <input {...props} onInput={onInput} placeholder=" " />
         {icon && (
           <span className="ui-library-input__icon" onClick={toogleIcon}>
             {icon}

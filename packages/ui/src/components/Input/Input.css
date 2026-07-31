@@ -3,9 +3,9 @@
    ========================================= */
 
 .ui-library-input-wrapper {
-  min-width: 350px;
+  min-width: 300px;
   position: relative;
-  margin: 5px 5px 23px;
+  margin-bottom: 24px;
   width: 100%;
 }
 
