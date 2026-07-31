@@ -3,6 +3,7 @@
 import { Select as BaseSelect } from "@base-ui/react/select";
 import "./Select.css";
 import ArrowIcon from "../../assets/icons/ArrowIcon";
+import ErrorIcon from "../../assets/icons/ErrorIcon";
 
 export interface SelectOption {
   label: string;
@@ -19,6 +20,7 @@ export interface SelectProps {
   disabled?: boolean;
   name?: string;
   className?: string;
+  error?: string;
 }
 
 export function Select({
@@ -27,6 +29,7 @@ export function Select({
   options,
   className,
   onValueChange,
+  error,
   ...props
 }: SelectProps) {
   return (
@@ -45,15 +48,39 @@ export function Select({
         <BaseSelect.Label className="ui-library-select__label">
           {label}
         </BaseSelect.Label>
-        <BaseSelect.Trigger className="ui-library-select__trigger">
-          <BaseSelect.Value
-            placeholder={placeholder}
-            className="ui-library-select__value"
-          />
+        <BaseSelect.Trigger
+          aria-invalid={!!error}
+          className={({ value }) =>
+            [
+              "ui-library-select__trigger",
+              !!value && !options.some((o) => o.value === value)
+                ? "ui-library-select__trigger--placeholder"
+                : "",
+              error ? "ui-library-select__trigger--error" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")
+          }
+        >
+          <BaseSelect.Value className="ui-library-select__value">
+            {(value: string | null) => {
+              if (!value) return placeholder ?? null;
+              const option = options.find((o) => o.value === value);
+              return option ? option.label : (placeholder ?? value);
+            }}
+          </BaseSelect.Value>
           <span className="ui-library-select__icon">
             <ArrowIcon />
           </span>
         </BaseSelect.Trigger>
+        {error && (
+          <div className="ui-library-select__error">
+            <span className="ui-library-select__error-icon">
+              <ErrorIcon />
+            </span>
+            <span className="ui-library-select__error-text">{error}</span>
+          </div>
+        )}
       </div>
       <BaseSelect.Portal>
         <BaseSelect.Positioner
