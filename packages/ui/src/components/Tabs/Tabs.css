@@ -7,6 +7,7 @@
   box-shadow: 2px 2px 4px 0 #00000026 inset;
   border-radius: var(--ui-radius-md);
   padding: 6px 12px;
+  box-sizing: content-box;
 }
 
 .ui-library-tabs__list {

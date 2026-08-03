@@ -6,12 +6,13 @@
   cursor: pointer;
   height: 49px;
   padding: 0 5px 5px 5px;
-  color: #434343;
-  font-weight: var(  --ui-font-weight-regular);
+  color: var(--ui-color-secondary);
+  font-weight: var(--ui-font-weight-medium);
   font-size: var(--ui-font-size-label);
 }
 
 .ui-library-switch{
+  box-sizing: content-box;
   display: flex;
   justify-content: flex-start;
   align-items: center;
