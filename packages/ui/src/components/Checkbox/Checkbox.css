@@ -5,6 +5,7 @@
   gap: var(--ui-space-2);
   width: 20px;
   height: 20px;
+  box-sizing: content-box;
   border: 2px solid var(--ui-color-border-subtle);
   border-radius: 4px;
   background-color: var(--ui-color-bg-default);

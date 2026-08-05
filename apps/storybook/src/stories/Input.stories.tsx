@@ -53,7 +53,7 @@ const meta = {
       control: "text",
       description: "El valor inicial del input (para inputs no controlados).",
     },
-    onChange: {
+    onValueChange: {
       action: "onChange",
       description: "Manejador de eventos llamado cuando el valor del input cambia.",
     },
@@ -74,7 +74,7 @@ const meta = {
   args: {
     label: "Label",
     disabled: false,
-    onChange: fn(),
+    onValueChange: fn(),
     onInput: fn(),
   },
 } satisfies Meta<typeof Input>;
