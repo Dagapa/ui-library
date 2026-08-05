@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { fn } from "storybook/test";
 import { Input } from "@ui-library/react";
 import { within } from "storybook/test";
-import { EyeSlashIcon } from '@ui-library/react'
+import { HomeIcon } from "../assets/HomeIcon";
 
 const meta = {
   title: "Sorin/Input",
@@ -10,7 +11,72 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  args: { label: "Label", disabled: false },
+  argTypes: {
+    label: {
+      control: "text",
+      description: "La etiqueta visible del input.",
+    },
+    error: {
+      control: "text",
+      description: "Mensaje de error a mostrar debajo del input.",
+    },
+    disabled: {
+      control: "boolean",
+      description: "Indica si el input está deshabilitado y no puede ser interactuado.",
+      defaultValue: false,
+    },
+    readOnly: {
+      control: "boolean",
+      description: "Indica si el input es de solo lectura (el usuario no puede modificar el valor).",
+      defaultValue: false,
+    },
+    required: {
+      control: "boolean",
+      description: "Indica si el input es requerido y debe ser completado antes de enviar el formulario.",
+      defaultValue: false,
+    },
+    type: {
+      control: "select",
+      options: ["text", "password", "email", "number", "tel"],
+      description: "El tipo de input (text, password, email, number, tel).",
+      defaultValue: "text",
+    },
+    name: {
+      control: "text",
+      description: "El nombre del input, utilizado al enviar el formulario.",
+    },
+    value: {
+      control: "text",
+      description: "El valor del input (para inputs controlados).",
+    },
+    defaultValue: {
+      control: "text",
+      description: "El valor inicial del input (para inputs no controlados).",
+    },
+    onChange: {
+      action: "onChange",
+      description: "Manejador de eventos llamado cuando el valor del input cambia.",
+    },
+    onInput: {
+      action: "onInput",
+      description: "Manejador de eventos llamado cuando el usuario escribe en el input.",
+    },
+    maxLength: {
+      control: "number",
+      description: "El número máximo de caracteres permitidos en el input.",
+    },
+    showCounter: {
+      control: "boolean",
+      description: "Indica si se muestra un contador de caracteres.",
+      defaultValue: false,
+    },
+  },
+  args: {
+    label: "Label",
+    disabled: false,
+    onChange: fn(),
+    onInput: fn(),
+  },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -32,15 +98,41 @@ export const InputDisabled: Story = {
   },
 };
 
-export const InputWithIcon: Story = {
+export const InputReadOnly: Story = {
   args: {
-    icon: <EyeSlashIcon/>
+    readOnly: true,
+    defaultValue: "Texto de solo lectura",
   },
 };
 
-export const InputError: Story = {
+export const InputRequired: Story = {
   args: {
-    error: "Error",
+    required: true,
+  },
+};
+
+export const InputPassword: Story = {
+  args: {
+    type: "password",
+    icon: <HomeIcon />,
+  },
+};
+
+export const InputEmail: Story = {
+  args: {
+    type: "email",
+  },
+};
+
+export const InputWithError: Story = {
+  args: {
+    error: "Este campo es requerido",
+  },
+};
+
+export const InputWithIcon: Story = {
+  args: {
+    icon: <HomeIcon />,
   },
 };
 

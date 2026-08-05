@@ -36,7 +36,7 @@ export function Select({
     <BaseSelect.Root
       items={options}
       onValueChange={(value) => {
-        if (value != null) {
+        if (value) {
           onValueChange?.(value);
         }
       }}

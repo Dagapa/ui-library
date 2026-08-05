@@ -89,7 +89,7 @@
 }
 
 .ui-library-input:has(input:disabled) .ui-library-input__icon {
-  color: var(--ui-color-disabled-strong);
+  background-color: var(--ui-color-disabled-strong);
 }
 
 /* =========================================
@@ -115,7 +115,7 @@
 }
 
 .ui-library-input--error .ui-library-input__icon {
-  color: var(--ui-color-error);
+  background-color: var(--ui-color-error);
 }
 
 .ui-library-input__error {
@@ -156,8 +156,24 @@
   position: absolute;
   top: 10px;
   right: 12px;
-  color: var(--ui-color-secondary);
+  background-color: var(--ui-color-secondary);
   cursor: pointer;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--ui-color-bg-default);
+
+  & > svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  & > i {
+    font-size: var(--ui-font-size-label);
+  }
 }
 
 .ui-library-input--has-icon input {
